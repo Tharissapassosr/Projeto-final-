@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang=”pt-br”>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Flashcard</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-    <meta charset=”UTF-8”>
-    
-    <meta name=”viewport” content=”width=device-width, initial-
-    scale=1.0”>
-    
-    <link rel=”stylesheet” href=”assets/style.css”>
-    <title>Flashcards</title>
-    </head>
 <body>
-    <main>
-        <section id=”container”>
-            <article class=”cartao”>
-                <div class=”cartao__conteudo”> 
-                    <h3>Programação</h3> 
-                    <div class=”cartao__conteudo__pergunta”>
-                        O que é teoria do caos
-                    </div>
-                    <div class=”cartao__conteudo__resposta”>
-                        A teoria do caos é um campo de estudo em matemática, com aplicações em várias disciplinas, incluindo física, engenharia, economia, biologia e filosofia.
+  <header>
+    <h1>Flashcards</h1>
+  </header>
 
-                    </div>
-                </div>
-            </article>
-            </section>
-    </main>
-    
-    <footer>
-        <p>Projeto desenvolvido pelas alunas, sem fins lucrativos afim de explicar sobre Teoria do caos</p>
-    </footer>
+  <main>
+    <div class="flashcard-container">
+      <div class="flashcard">
+        <div class="front">
+          <p>O que é HTML?</p>
+        </div>
+        <div class="back">
+          <p>HTML significa HyperText Markup Language. É usado para criar a estrutura de páginas web.</p>
+        </div>
+      </div>
+      <button id="flip-btn">Virar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 - Flashcards</p>
+  </footer>
+
+  <script>
+    const flashcard = document.querySelector('.flashcard');
+    const flipBtn = document.getElementById('flip-btn');
+
+    flipBtn.addEventListener('click', () => {
+      flashcard.classList.toggle('flipped');
+    });
+  </script>
 </body>
 </html>
+
